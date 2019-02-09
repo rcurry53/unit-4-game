@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/reset.css">
+</head>
+<body>
+    <h1>Crystals Collector!</h1>
+        <p>You will begiven a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    <h2>Number to Guess: <span id="number-to-guess"></span></h2>
+        <div id="crystals">
+            <img class="crystal-1" src="assests\images\Crystal 1.png">
+            <img class="crystal-2" src="assests\images\Arena_crystal.png">
+            <img class="crystal-3" src="assests\images\Crystal_cosmic.png">
+            <img class="crystal-4" src="assests\images\crystal_major_event.png">
+        </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    var goalNumber = 53;
+
+    $("#number-to-guess").text(goalNumber);
+
+    var counter = 0;;
+    $(".crystal-1").on("click", function() {
+        counter += 10;
+        alert("New score: " + counter);
+        if (counter === goalNumber) {
+        alert("You win!");
+        }
+
+        else if (counter >= goalNumber) {
+            alert("You lose!");
+        }
+        })
+
+    $(".crystal-2").on("click", function() {
+        counter += 3;
+        alert("New score: " + counter);
+        if (counter === goalNumber) {
+        alert("You win!");
+        }
+
+        else if (counter >= goalNumber) {
+            alert("You lose!");
+        }
+    })
+
+    $(".crystal-3").on("click", function() {
+        counter += 7;
+        alert("New score: " + counter);
+        if (counter === goalNumber) {
+        alert("You win!");
+        }
+
+        else if (counter >= goalNumber) {
+            alert("You lose!");
+        }
+    })
+
+    $(".crystal-4").on("click", function() {
+        counter += 5;
+        alert("New score: " + counter);
+        if (counter === goalNumber) {
+        alert("You win!");
+        }
+
+        else if (counter >= goalNumber) {
+            alert("You lose!");
+        }
+    })
+    
+    
+    
+    </script>    
+</body>
+</html>
